@@ -154,11 +154,50 @@ PROJECTS
 }
 .project {
     list-style: none;
-    flex: 1;
+    width: calc(100% / 3);
     height: 500px;
     margin: 0 10px;
     background-color: #ccc;
+    background-size: 100% 100%;
     border-radius: 8px;
+    background-color: #333;
+}
+
+.project__wrapper {
+    position: relative;
+
+}
+
+.project__wrapper--bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.project__desc {
+    position: absolute;
+    top: 0;
+    background: black;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project__wrapper, img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    transition: all 300ms ease;
+    opacity: 0.7;
 }
 
 /* 
